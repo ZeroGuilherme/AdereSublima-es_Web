@@ -3,7 +3,7 @@ import { MessageCircle, Mail, MapPin } from "lucide-react";
 
 export default function ContactSection() {
   const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!', '_blank');
+    window.open('https://wa.link/97omph', '_blank');
     console.log('Abrindo WhatsApp para contato');
   };
 

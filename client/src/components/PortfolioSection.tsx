@@ -1,6 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Play } from "lucide-react";
-import { useState } from "react";
 
 // Import all portfolio assets
 import image1 from "@assets/WhatsApp Image 2025-09-02 at 09.13.18_1758233621442.jpeg";
@@ -56,13 +54,6 @@ const portfolioItems = [
 ];
 
 export default function PortfolioSection() {
-  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
-
-  const handleVideoPlay = (id: number) => {
-    setPlayingVideo(id);
-    console.log(`Playing video ${id}`);
-  };
-
   return (
     <section className="py-16 bg-muted/30" id="portfolio">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -91,28 +82,15 @@ export default function PortfolioSection() {
                     data-testid={`img-portfolio-${item.id}`}
                   />
                 ) : (
-                  <div className="relative w-full h-full">
-                    <video 
-                      src={item.src}
-                      className="w-full h-full object-cover"
-                      muted
-                      loop
-                      playsInline
-                      autoPlay={playingVideo === item.id}
-                      data-testid={`video-portfolio-${item.id}`}
-                    />
-                    {playingVideo !== item.id && (
-                      <button
-                        onClick={() => handleVideoPlay(item.id)}
-                        className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-colors"
-                        data-testid={`button-play-${item.id}`}
-                      >
-                        <div className="bg-white/90 rounded-full p-4 group-hover:scale-110 transition-transform">
-                          <Play className="w-6 h-6 text-primary ml-1" />
-                        </div>
-                      </button>
-                    )}
-                  </div>
+                  <video 
+                    src={item.src}
+                    className="w-full h-full object-cover"
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                    data-testid={`video-portfolio-${item.id}`}
+                  />
                 )}
               </div>
               <CardContent className="p-4">

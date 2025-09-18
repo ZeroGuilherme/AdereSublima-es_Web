@@ -6,7 +6,7 @@ export default function FloatingWhatsApp() {
   const [isVisible, setIsVisible] = useState(true);
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!', '_blank');
+    window.open('https://wa.link/97omph', '_blank');
     console.log('WhatsApp flutuante acionado');
   };
 
@@ -24,7 +24,7 @@ export default function FloatingWhatsApp() {
         {/* WhatsApp Button */}
         <Button
           size="icon"
-          className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse hover:animate-none"
+          className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
           onClick={openWhatsApp}
           data-testid="button-floating-whatsapp"
         >
