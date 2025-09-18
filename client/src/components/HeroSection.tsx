@@ -10,13 +10,13 @@ export default function HeroSection() {
     console.log('Navegando para portfólio');
   };
 
-  const openWhatsApp = () => {
-    window.open('https://wa.link/97omph', '_blank');
-    console.log('Abrindo WhatsApp para orçamento');
+  const openWhatsApp = (source = 'hero') => {
+    window.open(`https://wa.link/97omph?text=Olá! Vim através do site (${source}) e gostaria de fazer um orçamento.`, '_blank');
+    console.log(`WhatsApp aberto via ${source}`);
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16" id="hero">
       {/* Background Video */}
       <video 
         autoPlay 
@@ -24,6 +24,9 @@ export default function HeroSection() {
         loop 
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{
+          animation: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'none' : undefined
+        }}
       >
         <source src={backgroundVideo} type="video/mp4" />
       </video>
@@ -59,23 +62,32 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
             size="lg" 
-            className="bg-primary border-primary-border hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold"
-            onClick={openWhatsApp}
+            className="bg-primary border-primary-border hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold min-h-[44px]"
+            onClick={() => openWhatsApp('hero')}
             data-testid="button-quote"
+            aria-label="Abrir WhatsApp para fazer orçamento"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
+            <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
             Faça seu orçamento
           </Button>
           <Button 
             size="lg" 
             variant="outline" 
-            className="border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 text-lg font-semibold"
+            className="border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 px-8 py-4 text-lg font-semibold min-h-[44px]"
             onClick={scrollToPortfolio}
             data-testid="button-portfolio"
+            aria-label="Ver portfólio de trabalhos"
           >
-            <Eye className="w-5 h-5 mr-2" />
+            <Eye className="w-5 h-5 mr-2" aria-hidden="true" />
             Ver Portfólio
           </Button>
+        </div>
+        
+        {/* Trust indicator */}
+        <div className="mt-8 text-center">
+          <p className="text-white/70 text-sm">
+            ⚡ Resposta rápida no WhatsApp • ✓ Orçamento sem compromisso
+          </p>
         </div>
       </div>
     </section>

@@ -21,10 +21,13 @@ const pillars = [
 
 export default function AboutSection() {
   return (
-    <section className="py-16 bg-background" id="sobre">
+    <section className="py-20 bg-background" id="sobre">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* About Text */}
         <div className="text-center mb-16">
+          <div className="text-primary font-semibold text-sm uppercase tracking-wide mb-3">
+            Conheça nossa história
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
             Sobre Nós
           </h2>

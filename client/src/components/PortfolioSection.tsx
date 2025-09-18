@@ -55,13 +55,16 @@ const portfolioItems = [
 
 export default function PortfolioSection() {
   return (
-    <section className="py-16 bg-muted/30" id="portfolio">
+    <section className="py-20 bg-muted/30" id="portfolio">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
+          <div className="text-primary font-semibold text-sm uppercase tracking-wide mb-3">
+            Veja nosso trabalho
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Nosso Portfólio
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Nossos Trabalhos em Ação
           </p>
         </div>
@@ -88,16 +91,16 @@ export default function PortfolioSection() {
                     muted
                     loop
                     playsInline
-                    autoPlay
+                    autoPlay={!window.matchMedia('(prefers-reduced-motion: reduce)').matches}
                     data-testid={`video-portfolio-${item.id}`}
                   />
                 )}
               </div>
-              <CardContent className="p-4">
-                <h3 className="font-semibold text-foreground mb-2 line-clamp-2">
+              <CardContent className="p-6">
+                <h3 className="font-bold text-foreground mb-2 line-clamp-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">
+                <p className="text-sm text-muted-foreground/80 line-clamp-2">
                   {item.description}
                 </p>
               </CardContent>
