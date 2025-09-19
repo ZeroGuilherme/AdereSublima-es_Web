@@ -50,9 +50,6 @@ export default function Header() {
               alt="Adere Sublimações" 
               className="h-32 object-contain"
             />
-            <span className="font-bold text-lg text-foreground hidden sm:block">
-              Adere Sublimações
-            </span>
           </button>
 
           {/* Desktop Navigation */}
