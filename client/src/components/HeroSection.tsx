@@ -147,8 +147,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <HeroHeader />
-      <main className="overflow-hidden">
+      <main className="overflow-hidden pt-20">
         <div
           aria-hidden
           className="z-[2] absolute inset-0 pointer-events-none isolate opacity-30 contain-strict hidden lg:block">
@@ -157,7 +156,7 @@ export default function HeroSection() {
           <div className="h-[80rem] -translate-y-[350px] absolute left-0 top-0 w-56 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsl(210_70%_50%/.04)_0,hsl(210_70%_50%/.02)_80%,transparent_100%)]" />
         </div>
         <section className="relative">
-          <div className="relative pt-24 md:pt-36">
+          <div className="relative pt-8 sm:pt-12 md:pt-16">
             {/* Background Video */}
             <AnimatedGroup
               variants={{
@@ -190,7 +189,9 @@ export default function HeroSection() {
                 muted 
                 loop 
                 playsInline
-                className="absolute inset-x-0 top-0 -z-20 w-full h-full object-cover opacity-60"
+                preload="metadata"
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3C/svg%3E"
+                className="absolute inset-x-0 top-0 -z-20 w-full h-full object-cover opacity-60 hidden sm:block"
                 style={{
                   animation: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'none' : undefined
                 }}
@@ -198,6 +199,11 @@ export default function HeroSection() {
                 <source src={backgroundVideo} type="video/mp4" />
               </video>
             </AnimatedGroup>
+            {/* Fallback gradient for mobile */}
+            <div 
+              aria-hidden 
+              className="absolute inset-0 -z-20 size-full sm:hidden bg-gradient-to-b from-primary/20 via-background/50 to-background"
+            />
             <div aria-hidden className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">

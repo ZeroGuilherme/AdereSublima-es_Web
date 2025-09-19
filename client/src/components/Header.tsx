@@ -58,7 +58,7 @@ export default function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-foreground transition-colors hover-elevate px-3 py-2 rounded-md"
+                className="text-muted-foreground hover:text-foreground transition-colors hover-elevate px-4 py-3 rounded-md min-h-[44px] flex items-center"
                 data-testid={`nav-${item.id}`}
               >
                 {item.label}
@@ -99,7 +99,7 @@ export default function Header() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
+                  className="block w-full text-left px-4 py-4 text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors min-h-[48px] flex items-center"
                   data-testid={`mobile-nav-${item.id}`}
                 >
                   {item.label}
