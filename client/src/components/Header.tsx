@@ -48,7 +48,7 @@ export default function Header() {
             <img 
               src={logoAdere} 
               alt="Adere Sublimações" 
-              className="h-8 object-contain"
+              className="h-32 object-contain"
             />
             <span className="font-bold text-lg text-foreground hidden sm:block">
               Adere Sublimações
