@@ -209,24 +209,6 @@ export default function HeroSection() {
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <AnimatedGroup variants={transitionVariants}>
-                  <button
-                    onClick={() => scrollToPortfolio()}
-                    className="hover:bg-background dark:hover:border-t-border bg-muted/80 backdrop-blur-sm group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
-                    <span className="text-foreground text-xs sm:text-sm">Veja nossos trabalhos em ação</span>
-                    <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
-
-                    <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                      <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                        <span className="flex size-6">
-                          <ArrowRight className="m-auto size-3" />
-                        </span>
-                        <span className="flex size-6">
-                          <ArrowRight className="m-auto size-3" />
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-        
                   <h1 className="mt-8 max-w-4xl mx-auto text-balance text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:mt-16 xl:text-[5.25rem] font-bold">
                     Transforme suas ideias em <span className="text-primary">realidade</span>
                   </h1>
@@ -282,34 +264,6 @@ export default function HeroSection() {
               </div>
             </div>
 
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.05,
-                      delayChildren: 0.75,
-                    },
-                  },
-                },
-                ...transitionVariants,
-              }}>
-              <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-                <div
-                  aria-hidden
-                  className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
-                />
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background/80 backdrop-blur-sm relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                  <img
-                    src={logoAdere} 
-                    alt="Adere Sublimações - Equipamentos de sublimação profissional" 
-                    className="aspect-15/8 relative rounded-2xl w-full h-auto object-contain bg-white p-8"
-                    width="2700"
-                    height="1440"
-                  />
-                </div>
-              </div>
-            </AnimatedGroup>
 
           </div>
         </section>
