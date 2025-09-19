@@ -60,8 +60,8 @@ const HeroHeader = () => {
       <nav
         data-state={menuState && 'active'}
         className="fixed z-20 w-full px-2 group">
-        <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/80 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+        <div className={cn('mx-auto mt-2 max-w-6xl px-4 sm:px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/80 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
+          <div className="relative flex flex-wrap items-center justify-between gap-4 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full justify-between lg:w-auto">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -70,7 +70,7 @@ const HeroHeader = () => {
                 <img 
                   src={logoAdere} 
                   alt="Adere Sublimações" 
-                  className="h-32 object-contain"
+                  className="h-12 sm:h-16 object-contain"
                 />
               </button>
 
@@ -205,7 +205,7 @@ export default function HeroSection() {
                   <button
                     onClick={() => scrollToPortfolio()}
                     className="hover:bg-background dark:hover:border-t-border bg-muted/80 backdrop-blur-sm group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
-                    <span className="text-foreground text-sm">Veja nossos trabalhos em ação</span>
+                    <span className="text-foreground text-xs sm:text-sm">Veja nossos trabalhos em ação</span>
                     <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
                     <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
@@ -220,10 +220,10 @@ export default function HeroSection() {
                     </div>
                   </button>
         
-                  <h1 className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem] font-bold">
+                  <h1 className="mt-8 max-w-4xl mx-auto text-balance text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:mt-16 xl:text-[5.25rem] font-bold">
                     Transforme suas ideias em <span className="text-primary">realidade</span>
                   </h1>
-                  <p className="mx-auto mt-8 max-w-2xl text-balance text-lg text-muted-foreground">
+                  <p className="mx-auto mt-6 sm:mt-8 max-w-2xl text-balance text-base sm:text-lg text-muted-foreground px-4">
                     Personalização de alta qualidade para canecas, camisetas, almofadas e muito mais. 
                     Sua criatividade não tem limites com a Adere Sublimações!
                   </p>
@@ -241,13 +241,13 @@ export default function HeroSection() {
                     },
                     ...transitionVariants,
                   }}
-                  className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
+                  className="mt-8 sm:mt-12 flex flex-col items-center justify-center gap-3 sm:gap-2 md:flex-row px-4">
                   <div
                     key={1}
                     className="bg-foreground/10 rounded-[14px] border p-0.5">
                     <Button
                       size="lg"
-                      className="rounded-xl px-8 text-base bg-primary border-primary-border text-primary-foreground"
+                      className="rounded-xl px-6 sm:px-8 text-sm sm:text-base bg-primary border-primary-border text-primary-foreground w-full sm:w-auto"
                       onClick={() => openWhatsApp('hero-primary')}
                       aria-label="Fazer orçamento via WhatsApp">
                       <MessageCircle className="w-5 h-5 mr-2" />
@@ -258,7 +258,7 @@ export default function HeroSection() {
                     key={2}
                     size="lg"
                     variant="ghost"
-                    className="h-10.5 rounded-xl px-5 text-white hover:bg-white/20"
+                    className="h-10.5 rounded-xl px-4 sm:px-5 text-white hover:bg-white/20 w-full sm:w-auto"
                     onClick={scrollToPortfolio}
                     aria-label="Ver portfólio de trabalhos">
                     <Eye className="w-5 h-5 mr-2" />
@@ -267,42 +267,14 @@ export default function HeroSection() {
                 </AnimatedGroup>
 
                 {/* Trust indicator */}
-                <div className="mt-8 text-center">
-                  <p className="text-white/70 text-sm">
+                <div className="mt-6 sm:mt-8 text-center px-4">
+                  <p className="text-white/70 text-xs sm:text-sm">
                     ⚡ Resposta rápida no WhatsApp • ✓ Orçamento sem compromisso
                   </p>
                 </div>
               </div>
             </div>
 
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.05,
-                      delayChildren: 0.75,
-                    },
-                  },
-                },
-                ...transitionVariants,
-              }}>
-              <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-                <div
-                  aria-hidden
-                  className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
-                />
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background/80 backdrop-blur-sm relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                  <img
-                    src={logoAdere} 
-                    alt="Adere Sublimações - Equipamentos de sublimação profissional" 
-                    className="aspect-15/8 relative rounded-2xl w-full h-auto object-contain bg-white p-8"
-                    width="2700"
-                    height="1440"
-                  />
-                </div>
-              </div>
-            </AnimatedGroup>
           </div>
         </section>
       </main>
