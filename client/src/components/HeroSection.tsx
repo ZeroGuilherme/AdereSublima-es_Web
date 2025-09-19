@@ -70,7 +70,7 @@ const HeroHeader = () => {
                 <img 
                   src={logoAdere} 
                   alt="Adere Sublimações" 
-                  className="h-12 sm:h-16 object-contain"
+                  className="h-32 object-contain"
                 />
               </button>
 
@@ -147,7 +147,8 @@ export default function HeroSection() {
 
   return (
     <>
-      <main className="overflow-hidden pt-20">
+      <HeroHeader />
+      <main className="overflow-hidden">
         <div
           aria-hidden
           className="z-[2] absolute inset-0 pointer-events-none isolate opacity-30 contain-strict hidden lg:block">
@@ -156,7 +157,7 @@ export default function HeroSection() {
           <div className="h-[80rem] -translate-y-[350px] absolute left-0 top-0 w-56 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsl(210_70%_50%/.04)_0,hsl(210_70%_50%/.02)_80%,transparent_100%)]" />
         </div>
         <section className="relative">
-          <div className="relative pt-8 sm:pt-12 md:pt-16">
+          <div className="relative pt-24 md:pt-36">
             {/* Background Video */}
             <AnimatedGroup
               variants={{
@@ -191,7 +192,7 @@ export default function HeroSection() {
                 playsInline
                 preload="metadata"
                 poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3C/svg%3E"
-                className="absolute inset-x-0 top-0 -z-20 w-full h-full object-cover opacity-60 hidden sm:block"
+                className="absolute inset-x-0 top-0 -z-20 w-full h-full object-cover opacity-60"
                 style={{
                   animation: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'none' : undefined
                 }}
@@ -280,6 +281,35 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
+
+            <AnimatedGroup
+              variants={{
+                container: {
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.05,
+                      delayChildren: 0.75,
+                    },
+                  },
+                },
+                ...transitionVariants,
+              }}>
+              <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
+                <div
+                  aria-hidden
+                  className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
+                />
+                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background/80 backdrop-blur-sm relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
+                  <img
+                    src={logoAdere} 
+                    alt="Adere Sublimações - Equipamentos de sublimação profissional" 
+                    className="aspect-15/8 relative rounded-2xl w-full h-auto object-contain bg-white p-8"
+                    width="2700"
+                    height="1440"
+                  />
+                </div>
+              </div>
+            </AnimatedGroup>
 
           </div>
         </section>

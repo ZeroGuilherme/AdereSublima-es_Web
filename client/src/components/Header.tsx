@@ -38,7 +38,7 @@ export default function Header() {
 
       {/* Sticky Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b" role="banner">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('hero')}
@@ -48,7 +48,7 @@ export default function Header() {
             <img 
               src={logoAdere} 
               alt="Adere Sublimações" 
-              className="h-12 sm:h-16 object-contain"
+              className="h-32 object-contain"
             />
           </button>
 
