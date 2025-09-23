@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adere Sublimações - Transforme suas ideias em realidade</title>
+    <meta name="description" content="Especialistas em sublimação personalizada para canecas, camisetas, almofadas e muito mais. Qualidade profissional e atendimento personalizado.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-content">
+                    <div class="nav-brand">
+                        <button onclick="scrollToTop()" class="logo-button">
+                            <img src="attached_assets/logo-adere-removebg-preview.jpg_1758233540978.png" 
+                                 alt="Adere Sublimações" class="logo">
+                        </button>
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <span class="hamburger"></span>
+                            <span class="hamburger"></span>
+                            <span class="hamburger"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="nav-menu desktop-menu">
+                        <ul>
+                            <li><button onclick="scrollToSection('sobre')">Sobre</button></li>
+                            <li><button onclick="scrollToSection('portfolio')">Portfólio</button></li>
+                            <li><button onclick="scrollToSection('contato')">Contato</button></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <button class="btn btn-outline mobile-hidden" onclick="scrollToSection('portfolio')">
+                            Ver Portfólio
+                        </button>
+                        <button class="btn btn-primary" onclick="openWhatsApp('header')">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul class="mobile-menu-items">
+                        <li><button onclick="scrollToSection('sobre')">Sobre</button></li>
+                        <li><button onclick="scrollToSection('portfolio')">Portfólio</button></li>
+                        <li><button onclick="scrollToSection('contato')">Contato</button></li>
+                    </ul>
+                    <div class="mobile-actions">
+                        <button class="btn btn-outline" onclick="scrollToSection('portfolio')">
+                            Ver Portfólio
+                        </button>
+                        <button class="btn btn-primary" onclick="openWhatsApp('mobile-menu')">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="attached_assets/fundo_1758233569956.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Transforme suas ideias em <span class="text-primary">realidade</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Personalização de alta qualidade para canecas, camisetas, almofadas e muito mais. 
+                        Sua criatividade não tem limites com a Adere Sublimações!
+                    </p>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg hero-cta" onclick="openWhatsApp('hero-primary')">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Faça seu orçamento
+                    </button>
+                    <button class="btn btn-ghost btn-lg" onclick="scrollToSection('portfolio')">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                        Ver Portfólio
+                    </button>
+                </div>
+                
+                <div class="trust-indicators">
+                    <p>⚡ Resposta rápida no WhatsApp • ✓ Orçamento sem compromisso</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="sobre">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Conheça nossa história</div>
+                    <h2 class="section-title">Sobre Nós</h2>
+                    <p class="section-description">
+                        Na Adere Sublimações, somos especialistas em transformar suas ideias em produtos únicos e personalizados. 
+                        Com paixão pela criatividade e compromisso com a qualidade, utilizamos equipamentos de última geração para 
+                        garantir que cada peça seja uma obra de arte. Nossa missão é dar vida às suas ideias através da técnica de 
+                        sublimação, oferecendo produtos duráveis e de alta qualidade.
+                    </p>
+                </div>
+                
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                                <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                                <path d="M3 12c0 7.5 7.5 7.5 9 7.5s9 0 9-7.5"/>
+                            </svg>
+                        </div>
+                        <h3>Criação</h3>
+                        <p>Transformamos suas ideias mais criativas em produtos únicos e personalizados.</p>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"/>
+                                <path d="m8.21 13.89 7.74 7.74"/>
+                                <path d="M15 7v4"/>
+                                <path d="m11 7 4 4"/>
+                            </svg>
+                        </div>
+                        <h3>Qualidade</h3>
+                        <p>Utilizamos equipamentos de última geração para garantir a máxima qualidade em cada produto.</p>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>Paixão</h3>
+                        <p>Nossa paixão pela criatividade e dedicação ao cliente fazem a diferença em cada projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Veja nosso trabalho</div>
+                    <h2 class="section-title">Nosso Portfólio</h2>
+                    <p class="section-description">Nossos Trabalhos em Ação</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="attached_assets/WhatsApp Image 2025-09-02 at 09.13.18_1758233621442.jpeg" 
+                             alt="Processo de impressão em alta qualidade">
+                        <div class="portfolio-content">
+                            <h3>Processo de impressão em alta qualidade</h3>
+                            <p>Impressoras de grande formato para sublimação profissional</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <video muted loop playsinline autoplay>
+                            <source src="attached_assets/WhatsApp Video 2025-09-02 at 09.14.12_1758233621443.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-content">
+                            <h3>Personalização de camisetas esportivas</h3>
+                            <p>Equipamentos modernos para sublimação em tecidos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <img src="attached_assets/WhatsApp Image 2025-09-02 at 09.14.54_1758233621441.jpeg" 
+                             alt="Materiais premium para sublimação">
+                        <div class="portfolio-content">
+                            <h3>Materiais premium para sublimação</h3>
+                            <p>Papéis e materiais de alta qualidade para resultados perfeitos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <video muted loop playsinline autoplay>
+                            <source src="attached_assets/WhatsApp Video 2025-09-02 at 09.20.40_1758233621440.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-content">
+                            <h3>Equipamento TS100-1600</h3>
+                            <p>Tecnologia avançada para projetos de grande escala</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <img src="attached_assets/WhatsApp Image 2025-09-02 at 09.14.56_1758233621441.jpeg" 
+                             alt="Produtos finalizados">
+                        <div class="portfolio-content">
+                            <h3>Produtos finalizados</h3>
+                            <p>Resultado final dos nossos trabalhos de sublimação</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <video muted loop playsinline autoplay>
+                            <source src="attached_assets/WhatsApp Video 2025-09-02 at 09.20.50_1758233621439.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-content">
+                            <h3>Processo completo de sublimação</h3>
+                            <p>Do início ao fim, veja como criamos seus produtos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contato">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Vamos conversar</div>
+                    <h2 class="section-title">Pronto para personalizar?</h2>
+                    <p class="section-description">
+                        Entre em contato conosco e solicite seu orçamento sem compromisso. 
+                        Estamos prontos para transformar suas ideias em produtos únicos!
+                    </p>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <svg class="icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Resposta em minutos
+                    </div>
+                    <div class="trust-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Atendimento personalizado
+                    </div>
+                    <div class="trust-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Orçamento gratuito
+                    </div>
+                </div>
+                
+                <div class="contact-actions">
+                    <button class="btn btn-primary btn-lg" onclick="openWhatsApp('contact-primary')">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Fale Conosco no WhatsApp
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="openWhatsApp('contact-secondary')">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        Entre em Contato
+                    </button>
+                </div>
+                
+                <div class="company-info">
+                    <div class="company-name">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Adere Sublimações
+                    </div>
+                    <p class="copyright">© 2024 Adere Sublimações. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp" id="floatingWhatsApp">
+        <button class="whatsapp-btn" onclick="openWhatsApp('floating')" title="Fale conosco no WhatsApp!">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+        </button>
+        <button class="close-btn" onclick="closeFloatingWhatsApp()" title="Fechar">×</button>
+        <div class="tooltip">Fale conosco no WhatsApp!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
