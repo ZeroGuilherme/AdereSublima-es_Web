@@ -48,7 +48,7 @@ export default function Header() {
             <img 
               src={logoAdere} 
               alt="Adere Sublimações" 
-              className="h-32 object-contain"
+              className="h-64 object-contain"
             />
           </button>
 
