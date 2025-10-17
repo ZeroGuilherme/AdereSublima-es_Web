@@ -8,32 +8,132 @@
     <title>Adere Sublimações - Transforme suas ideias em realidade</title>
     <meta name="description" content="Especialistas em sublimação personalizada para canecas, camisetas, almofadas e muito mais. Qualidade profissional e atendimento personalizado.">
     <style>
-/* CSS Variables */
-:root {
-  --primary: hsl(210, 70%, 50%);
-  --primary-foreground: hsl(0, 0%, 98%);
-  --background: hsl(0, 0%, 98%);
-  --foreground: hsl(0, 0%, 15%);
-  --muted: hsl(0, 2%, 90%);
-  --muted-foreground: hsl(0, 0%, 15%);
-  --border: hsl(0, 0%, 88%);
-  --green: hsl(142, 76%, 36%);
-  --container-max-width: 1200px;
-  --section-padding-mobile: 3rem 0;
-  --section-padding-tablet: 4rem 0;
-  --section-padding-desktop: 5rem 0;
-  --border-radius: 0.5rem;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 4rem;
-}
+    /* CSS Variables */
+    :root {
+      --primary: hsl(210, 70%, 50%);
+      --primary-foreground: hsl(0, 0%, 98%);
+      --background: hsl(0, 0%, 98%);
+      --foreground: hsl(0, 0%, 15%);
+      --muted: hsl(0, 2%, 90%);
+      --muted-foreground: hsl(0, 0%, 15%);
+      --border: hsl(0, 0%, 88%);
+      --green: hsl(142, 76%, 36%);
+      --container-max-width: 1200px;
+      --section-padding-mobile: 3rem 0;
+      --section-padding-tablet: 4rem 0;
+      --section-padding-desktop: 5rem 0;
+      --border-radius: 0.5rem;
+      --font-size-xs: 0.75rem;
+      --font-size-sm: 0.875rem;
+      --font-size-base: 1rem;
+      --font-size-lg: 1.125rem;
+      --font-size-xl: 1.25rem;
+      --font-size-2xl: 1.5rem;
+      --font-size-3xl: 1.875rem;
+      --font-size-4xl: 2.25rem;
+      --font-size-5xl: 3rem;
+      --font-size-6xl: 4rem;
+      
+      /* Animation variables */
+      --animation-duration: 0.6s;
+      --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
+      --animation-delay: 0.1s;
+    }
+    
+    /* Global animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    
+    /* Utility classes for animations */
+    .animate-fade-in {
+      animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+    }
+    
+    .animate-slide-in-left {
+      animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+    }
+    
+    .animate-slide-in-right {
+      animation: slideInRight var(--animation-duration) var(--animation-timing) forwards;
+    }
+    
+    .animate-scale-in {
+      animation: scaleIn var(--animation-duration) var(--animation-timing) forwards;
+    }
+    
+    .animate-pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    /* Stagger animation delays */
+    .animate-stagger-1 { animation-delay: calc(var(--animation-delay) * 1); }
+    .animate-stagger-2 { animation-delay: calc(var(--animation-delay) * 2); }
+    .animate-stagger-3 { animation-delay: calc(var(--animation-delay) * 3); }
+    .animate-stagger-4 { animation-delay: calc(var(--animation-delay) * 4); }
+    .animate-stagger-5 { animation-delay: calc(var(--animation-delay) * 5); }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -66,9 +166,51 @@ body {
   width: 100%;
 }
 
-@media (min-width: 480px) { .container { padding: 0 1.25rem; } }
-@media (min-width: 640px) { .container { padding: 0 1.5rem; } }
-@media (min-width: 1024px) { .container { padding: 0 2rem; } }
+/* Enhanced responsive breakpoints */
+@media (min-width: 320px) {
+  .container { padding: 0 0.75rem; }
+  .hero-title { font-size: var(--font-size-3xl); }
+}
+
+@media (min-width: 375px) {
+  .container { padding: 0 0.875rem; }
+}
+
+@media (min-width: 480px) {
+  .container { padding: 0 1.25rem; }
+  .hero-title { font-size: var(--font-size-4xl); }
+  .section-title { font-size: var(--font-size-4xl); }
+}
+
+@media (min-width: 640px) {
+  .container { padding: 0 1.5rem; }
+  .hero-title { font-size: var(--font-size-5xl); }
+  .section-title { font-size: var(--font-size-5xl); }
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 1.75rem; }
+  .hero-title { font-size: var(--font-size-6xl); }
+  .section-title { font-size: var(--font-size-5xl); }
+}
+
+@media (min-width: 1024px) {
+  .container { padding: 0 2rem; }
+  .hero-title { font-size: 5rem; }
+  .section-title { font-size: 3.5rem; }
+}
+
+@media (min-width: 1280px) {
+  .container { padding: 0 2.5rem; }
+  .hero-title { font-size: 5.5rem; }
+  .section-title { font-size: 4rem; }
+}
+
+@media (min-width: 1536px) {
+  .container { padding: 0 3rem; }
+  .hero-title { font-size: 6rem; }
+  .section-title { font-size: 4.5rem; }
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
@@ -228,22 +370,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo {
-  height: 3rem;
+  height: 6rem;
   object-fit: contain;
-  max-width: 120px;
+  max-width: 240px;
 }
 
 @media (min-width: 480px) {
   .logo {
-    height: 3.5rem;
-    max-width: 140px;
+    height: 7rem;
+    max-width: 280px;
   }
 }
 
 @media (min-width: 768px) {
   .logo {
-    height: 4rem;
-    max-width: 160px;
+    height: 8rem;
+    max-width: 320px;
   }
 }
 
@@ -591,14 +733,51 @@ section {
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 640px) { .pillar-card { padding: 2rem; } }
 @media (min-width: 1024px) { .pillar-card { padding: 2.5rem; } }
 
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
 .pillar-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.pillar-card:hover::before {
+  left: 100%;
+}
+
+.pillar-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover .pillar-icon {
+  background-color: var(--primary);
+  color: white;
+  transform: scale(1.1);
 }
 
 .pillar-icon {
@@ -915,9 +1094,51 @@ section {
   border: 0;
 }
 
+/* Enhanced mobile optimization */
 @media (max-width: 767px) {
   .hidden-mobile {
     display: none !important;
+  }
+  
+  /* Touch-friendly tap targets */
+  .btn, .nav-menu button, .mobile-menu-items button {
+    min-height: 48px;
+    min-width: 44px;
+  }
+  
+  /* Improved mobile spacing */
+  .hero-title {
+    font-size: var(--font-size-3xl) !important;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-base) !important;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-3xl) !important;
+    line-height: 1.3;
+  }
+  
+  /* Mobile grid adjustments */
+  .pillars-grid {
+    gap: 1rem;
+  }
+  
+  .portfolio-grid {
+    gap: 0.75rem;
+  }
+  
+  /* Mobile menu improvements */
+  .mobile-menu {
+    max-height: calc(100vh - 80px);
+    padding: 1.5rem 1rem;
+  }
+  
+  .mobile-menu-items button {
+    padding: 1rem 0;
+    font-size: var(--font-size-lg);
   }
 }
 
@@ -927,14 +1148,30 @@ section {
   }
 }
 
+/* Disable hover effects on touch devices */
 @media (hover: none) and (pointer: coarse) {
   .btn:hover { transform: none; }
   .pillar-card:hover { transform: none; }
   .portfolio-item:hover { transform: none; }
   .portfolio-item:hover img,
   .portfolio-item:hover video { transform: none; }
+  
+  /* Improve touch feedback */
+  .btn:active, .nav-menu button:active, .mobile-menu-items button:active {
+    background-color: var(--muted);
+    transform: scale(0.98);
+  }
 }
 
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -942,6 +1179,27 @@ section {
     transition-duration: 0.01ms !important;
   }
   html { scroll-behavior: auto; }
+  .hero { transform: none !important; }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+  
+  .mobile-menu {
+    background-color: rgba(0, 0, 0, 0.98);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-menu button, .mobile-menu-items button {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .nav-menu button:hover, .mobile-menu-items button:hover {
+    color: white;
+  }
 }
 
 .btn:focus-visible,
@@ -1349,6 +1607,7 @@ function initializeVideos() {
 }
 
 function initializeAnimations() {
+    // Enhanced scroll animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -1357,19 +1616,45 @@ function initializeAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                const target = entry.target;
+                
+                // Add animation classes based on element type
+                if (target.classList.contains('pillar-card')) {
+                    target.classList.add('animate-fade-in-up', 'animate-stagger-1');
+                } else if (target.classList.contains('portfolio-item')) {
+                    target.classList.add('animate-scale-in', 'animate-stagger-2');
+                } else if (target.classList.contains('section-header')) {
+                    target.classList.add('animate-fade-in');
+                } else if (target.classList.contains('hero-content')) {
+                    target.classList.add('animate-fade-in-up');
+                } else {
+                    target.classList.add('animate-fade-in');
+                }
+                
+                // Remove observer after animation
+                observer.unobserve(target);
             }
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.pillar-card, .portfolio-item');
+    // Observe all animated elements
+    const animatedElements = document.querySelectorAll('.pillar-card, .portfolio-item, .section-header, .hero-content');
     animatedElements.forEach(el => {
+        // Reset styles
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateY(30px)';
         observer.observe(el);
     });
+
+    // Add parallax effect to hero section
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = scrolled * 0.5;
+            heroSection.style.transform = `translateY(${parallax}px)`;
+        });
+    }
 }
 
 function initializePortfolio() {
